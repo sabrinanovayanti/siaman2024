@@ -10,10 +10,20 @@ body {
   background-position: center;
 }
 
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25%; /* Adjust the size */
+  height: auto; /* Maintain aspect ratio */
+  filter: drop-shadow(0 0 2px rgba(95, 95, 95, 0.8)) /* Black outline shadow */
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* White shadow for highlight */
+}
+
 h1 {
   font-size: 4em; /* Make the text larger */
   text-align: center;
-  color: rgb(77, 127, 34); /* Text color */
+  color: rgb(242, 197, 107); /* Text color */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Glow effect */
   animation: glow 1.5s ease-in-out infinite alternate,
     slideIn 1.5s ease-out forwards;
@@ -21,12 +31,12 @@ h1 {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.7),
-      0 0 10px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 3px rgb(171, 145, 39), 0 0 10px rgb(171, 145, 39),
+      0 0 10px rgb(171, 145, 39);
   }
   to {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1),
-      0 0 20px rgba(255, 255, 255, 1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
   }
 }
 
