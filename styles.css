@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("rssitanala.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 4em; /* Make the text larger */
+  text-align: center;
+  color: rgb(77, 127, 34); /* Text color */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Glow effect */
+  animation: glow 1.5s ease-in-out infinite alternate,
+    slideIn 1.5s ease-out forwards;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.7),
+      0 0 10px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  to {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px; /* Adjust font size for mobile */
+  }
+}
