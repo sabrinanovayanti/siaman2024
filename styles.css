@@ -20,6 +20,16 @@ body {
     drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* White shadow for highlight */
 }
 
+#top-right-logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25%; /* Adjust the size */
+  height: auto; /* Maintain aspect ratio */
+  filter: drop-shadow(0 0 2px rgba(95, 95, 95, 0.8)) /* Black outline shadow */
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* White shadow for highlight */
+}
+
 h1 {
   font-size: 4em; /* Make the text larger */
   text-align: center;
@@ -55,10 +65,19 @@ h1 {
   h1 {
     font-size: 60px; /* Adjust font size for mobile */
   }
-   #logo {
+  #logo {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 10px;
+    width: 30%; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(0 0 2px rgba(95, 95, 95, 0.8))
+      /* Black outline shadow */ drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* White shadow for highlight */
+  }
+  #top-right-logo {
+    position: absolute;
+    top: 15px;
+    right: 10px;
     width: 20%; /* Adjust the size */
     height: auto; /* Maintain aspect ratio */
     filter: drop-shadow(0 0 2px rgba(95, 95, 95, 0.8))
