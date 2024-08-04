@@ -63,7 +63,7 @@ h1 {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 60px; /* Adjust font size for mobile */
+    font-size: 40px; /* Adjust font size for mobile */
   }
   #logo {
     position: absolute;
