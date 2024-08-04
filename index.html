@@ -13,7 +13,43 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   </head>
   <body>
+    <img src="rssitanalakemenkes.png" alt="Logo RSUP Sitanala" id="logo" />
     <h1>Selamat datang di RSUP Sitanala Tangerang bersama Si Aman</h1>
+    <audio id="welcome-audio" src="welcome.mp3" preload="auto"></audio>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const utterance = new SpeechSynthesisUtterance(
+          "Halo, Selamat datang di RSUP Sitanala Tangerang bersama Si Aman"
+        );
+        utterance.lang = "id-ID";
+        utterance.rate = 1;
+
+        const voices = speechSynthesis.getVoices();
+        const indonesianVoice = voices.find((voice) => voice.lang === "id-ID");
+        if (indonesianVoice) {
+          utterance.voice = indonesianVoice;
+        }
+
+        utterance.onend = function () {
+          window.scrollTo(0, document.body.scrollHeight);
+        };
+
+        if (voices.length === 0) {
+          speechSynthesis.onvoiceschanged = function () {
+            const voices = speechSynthesis.getVoices();
+            const indonesianVoice = voices.find(
+              (voice) => voice.lang === "id-ID"
+            );
+            if (indonesianVoice) {
+              utterance.voice = indonesianVoice;
+            }
+            speechSynthesis.speak(utterance);
+          };
+        } else {
+          speechSynthesis.speak(utterance);
+        }
+      });
+    </script>
     <script
       id="messenger-widget-b"
       src="https://cdn.botpenguin.com/website-bot.js"
